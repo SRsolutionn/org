@@ -1,0 +1,190 @@
+/* About Page */
+.about-hero {
+  padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+}
+
+.our-story {
+  padding: var(--spacing-xl) 0;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.story-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--color-gray);
+  font-size: 1.0625rem;
+}
+
+.story-text strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.founder-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.founder-image-placeholder {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founder-image-placeholder svg {
+  width: 60px;
+  height: 60px;
+}
+
+.founder-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.founder-title {
+  color: var(--color-light-gray);
+  margin-bottom: 1rem;
+}
+
+.founder-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-light-gray);
+}
+
+/* Values Section */
+.our-values {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-off-white);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  padding: 2.5rem;
+  background: var(--color-white);
+  border-radius: 20px;
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-primary);
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  padding: var(--spacing-xl) 0;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.mv-card {
+  padding: 3rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 20px;
+  color: var(--color-white);
+}
+
+.mv-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.mv-card p {
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-about {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-off-white);
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.reason-item {
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: 15px;
+}
+
+.reason-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-light-gray);
+  margin-bottom: 1rem;
+}
+
+.reason-item h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.reason-item p {
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .story-content {
+    grid-template-columns: 1fr;
+  }
+
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}

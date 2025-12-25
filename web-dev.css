@@ -1,0 +1,257 @@
+/* Web Dev Page Theme */
+.dev-page {
+  --theme-color: #10b981;
+  --theme-light: #34d399;
+  --theme-dark: #059669;
+}
+
+.logo-dev .logo-text {
+  color: var(--theme-color);
+}
+
+/* Dev Hero */
+.dev-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #34d399 100%);
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.dev-3d-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+.code-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: particle 10s infinite;
+}
+
+.code-particle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.code-particle:nth-child(2) {
+  top: 60%;
+  right: 30%;
+  animation-delay: 3s;
+}
+
+.code-particle:nth-child(3) {
+  bottom: 30%;
+  left: 50%;
+  animation-delay: 6s;
+}
+
+@keyframes particle {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(100px, -100px) scale(2);
+    opacity: 1;
+  }
+}
+
+/* Tech Stack Section */
+.tech-stack {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-white);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.tech-card {
+  padding: 2rem;
+  background: var(--color-off-white);
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.tech-card:hover {
+  border-color: var(--theme-color);
+  transform: translateY(-5px);
+  background: var(--color-white);
+}
+
+.tech-icon {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--theme-color);
+  font-family: var(--font-mono);
+  margin-bottom: 0.5rem;
+}
+
+.tech-card p {
+  color: var(--color-gray);
+  font-size: 0.875rem;
+}
+
+/* Dev Services Section */
+.dev-services {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-off-white);
+}
+
+.services-grid-dev {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.service-card-dev {
+  padding: 2.5rem;
+  background: var(--color-white);
+  border-radius: 20px;
+  transition: var(--transition-base);
+  border-left: 4px solid transparent;
+}
+
+.service-card-dev:hover {
+  border-left-color: var(--theme-color);
+  transform: translateX(5px);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+}
+
+.card-icon-dev {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  color: var(--theme-color);
+}
+
+.service-card-dev h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.service-card-dev p {
+  color: var(--color-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.service-card-dev ul {
+  list-style: none;
+}
+
+.service-card-dev ul li {
+  padding: 0.5rem 0;
+  color: var(--color-dark-gray);
+  position: relative;
+  padding-left: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.service-card-dev ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--theme-color);
+  font-weight: 700;
+}
+
+/* Dev Process Section */
+.dev-process {
+  padding: var(--spacing-xl) 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.process-step-dev {
+  padding: 2rem;
+  background: linear-gradient(135deg, #fff 0%, #f0fdf4 100%);
+  border-radius: 20px;
+  position: relative;
+}
+
+.step-number-dev {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--theme-color);
+  opacity: 0.15;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.process-step-dev h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.process-step-dev p {
+  color: var(--color-gray);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.dev-cta {
+  background: var(--theme-color);
+}
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid-dev {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
